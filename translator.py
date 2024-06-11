@@ -27,7 +27,7 @@ def translate_to_python(command_descriptions, filename):
 
     #tradução das descrições dos comandos para Python
     for command in command_descriptions:
-        if "INICIO DO PROGRAiA" in command:
+        if "INICIO DO PROGRAMA" in command:
             #ignora a descrição do início do programa
             continue  
         elif "FIM DO PROGRAMA" in command:
