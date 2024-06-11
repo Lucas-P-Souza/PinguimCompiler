@@ -1,3 +1,4 @@
+INICIO DO PROGRAMA => init
 a = input()
 b = 5
 if ( a == b):

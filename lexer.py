@@ -1,6 +1,8 @@
+#descrção: Implementação de um lexer para a linguagem Pinguim
+#import da biblioteca ply para tokenização
 import ply.lex as lex
 
-# Lista de tokens
+#lista de tokens
 tokens = [
     'ID', 'NUMBER', 'REAL', 'STRING',
     'ASSIGN', 'COLON',
@@ -12,7 +14,7 @@ tokens = [
     'INIT', 'END', 'PIN', 'POUT', 'PIF', 'PAF', 'PHILE', 'POR', 'PEGIN', 'PEND'
 ]
 
-# Expressões regulares para tokens simples
+#expressões regulares para tokens simples
 t_ASSIGN = r'='
 t_COLON = r':'
 t_PLUS = r'\+'
@@ -39,7 +41,7 @@ t_DOT = r'\.'
 t_COMMA = r','
 t_SEMICOLON = r';'
 
-# Palavras reservadas
+#palavras reservadas
 reserved = {
     'init': 'INIT',
     'pinguim': 'END',
@@ -52,7 +54,7 @@ reserved = {
     'pend': 'PEND'
 }
 
-# Tokens com regras mais complexas
+#tokens com regras mais complexas
 def t_ID(t):
     r'[a-zA-Z_][a-zA-Z_0-9]*'
     t.type = reserved.get(t.value, 'ID')
@@ -73,23 +75,23 @@ def t_STRING(t):
     t.value = str(t.value)
     return t
 
-# Ignorar espaços e tabulações
+#ignorar espaços e tabulações (não são tokens)
 t_ignore = ' \t'
 
-# Definir comportamento para novas linhas
+#definir comportamento para novas linhas (incrementar o número da linha)
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
 
-# Tratar erros
+#tratar erros de caracteres ilegais
 def t_error(t):
     print(f"Caracter ilegal '{t.value[0]}'")
     t.lexer.skip(1)
 
-# Construir o lexer
+#construir o lexer
 lexer = lex.lex()
 
-# Função para ler arquivo e tokenizar, imprimindo tokens no terminal
+#função para ler arquivo e tokenizar, imprimindo tokens no terminal
 def tokenize_file(filename):
     with open(filename, 'r') as file:
         data = file.read()
@@ -99,6 +101,3 @@ def tokenize_file(filename):
         if not tok:
             break
         print(tok)
-
-# Testar o lexer com o arquivo de exemplo
-#tokenize_file('codigo_fonte.txt')

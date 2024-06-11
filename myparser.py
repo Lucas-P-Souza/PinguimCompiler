@@ -1,11 +1,16 @@
+#Descrição: Módulo responsável por realizar o parsing da linguagem de programação 
+# Pinguim para a geração de comandos em texto e tradução para Python.
+
+#import das funções de tokenização, parsing e tradução, do módulo os
 import ply.yacc as yacc
 import translator as tr
 import os
 from lexer import tokens
 
-# Lista para armazenar as descrições dos comandos
+#lista para armazenar as descrições dos comandos
 command_descriptions = []
 
+#definições da gramática da linguagem de programação Pinguim
 def p_program(p):
     '''program : INIT commands END'''
     command_descriptions.append("INICIO DO PROGRAMA => " + p[1])
@@ -131,32 +136,39 @@ def p_error(p):
 
 parser = yacc.yacc()
 
+#função para realizar o parsing do arquivo de entrada
 def parse_file(filename):
     global command_descriptions
 
-    # Extrair o nome do arquivo sem a extensão
+    #extrair o nome do arquivo sem a extensão
     file_name_without_extension = os.path.splitext(filename)[0]
     output_filename = file_name_without_extension + '_commands_output.txt'
 
+    #ler o conteúdo do arquivo de entrada ('r' -> modo de leitura (read))
     with open(filename, 'r') as file:
         data = file.read()
     
-    # Reinicializar command_descriptions
+    #reinicializar command_descriptions (esvaziar a lista de descrições de comandos)
     command_descriptions = []
     
+    #realizar o parsing do conteúdo do arquivo
     parser.parse(data)
     
-    # Escrever as descrições dos comandos no arquivo de saída (modo de escrita)
+    #escrever as descrições dos comandos no arquivo de saída ('w' -> modo de escrita (write))
     with open(output_filename, 'w') as out_file:
+        #para cada descrição de comando, escrever no arquivo de saída
         for description in command_descriptions:
-            if isinstance(description, list):  # Verifica se é uma lista de comandos
+            #verificar se é uma lista de comandos
+            if isinstance(description, list):  
+                #para cada comando na lista, escrever no arquivo de saída
                 for cmd in description:
                     out_file.write(cmd + "\n")
                     print(cmd)
+            #caso contrário, escrever a descrição no arquivo de saída
             else:
                 out_file.write(description + "\n")
                 print(description)
 
-    # Traduzir para Python
+    #traduzir as descrições dos comandos para Python
     print("\nSaída do arquivo", filename, " traduzido para Python:")
     tr.translate_to_python(command_descriptions, filename)

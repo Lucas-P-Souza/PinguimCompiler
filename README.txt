@@ -38,11 +38,11 @@ Grupo:
 Descrição do Projeto:
 
     Este projeto consiste em um analisador de código fonte escrito em Python, capaz 
-    de tokenizar o código e gerar descrições dos comandos presentes nele com base na
-    linguagem Pinguim. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para 
-    implementar tanto o analisador léxico quanto o sintático. Além disso, há uma 
-    funcionalidade de tradução dos comandos da linguagem Pinguim para Python, 
-    facilitando a execução dos programas escritos em Pinguim.
+    de tokenizar o código, gerar descrições dos comandos presentes nele com base na
+    linguagem Pinguim e traduzi-lo para python. O projeto utiliza a biblioteca Ply 
+    (Python Lex-Yacc) para implementar tanto o analisador léxico quanto o sintático. 
+    Além disso, há uma funcionalidade de tradução dos comandos da linguagem Pinguim 
+    para Python, facilitando a execução dos programas escritos em Pinguim.
 
 Linguagem Pinguim:
 
@@ -60,8 +60,8 @@ Linguagem Pinguim:
 
         Estruturas de controle: 
 
-            Possuem estruturas de controle como 'pif', 'paf', 'por' e 'phile' que respectivamente se 
-            comportam de maneira semelhante à 'if', 'else', 'for' e 'while' de C.
+            Possuem estruturas de controle como 'pif', 'paf' e 'phile' que respectivamente se 
+            comportam de maneira semelhante à 'if', 'else' e 'while' de C.
 
         Operadores: 
 
@@ -101,8 +101,8 @@ Descrição do diretório do Código:
 
         Este arquivo gerado automaticamente pela biblioteca Ply. Contém a tabela de análise 
         sintática (parsing table) utilizada pelo Ply para processar a gramática definida no 
-        myparser.py. Ele é essencial para o funcionamento do parser, mas não precisa ser
-        editado manualmente.
+        myparser.py. Ele é essencial para o funcionamento do parser, e não deve ser editado 
+        manualmente.
 
     Parsetab (parsetab.py):
 
