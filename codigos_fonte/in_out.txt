@@ -1,0 +1,5 @@
+init
+    pin a
+    pout a
+pinguim
+

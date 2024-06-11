@@ -1,0 +1,11 @@
+init
+    pin a
+    b = 5
+    pif (a==b) pegin
+        pout "igual"
+    pend
+    paf {
+        pout "diferente"
+    }
+pinguim
+

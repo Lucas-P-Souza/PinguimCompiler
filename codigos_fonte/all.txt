@@ -1,0 +1,15 @@
+init
+    a = 4
+    b = 5
+    pif (a==b) pegin
+        pout "igual"
+    pend
+    paf pegin
+        i = 0
+        phile(i<=b) {
+            pout i
+            i = i + 1
+        pend
+    }
+pinguim
+
