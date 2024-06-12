@@ -1,4 +1,0 @@
-INICIO DO PROGRAMA => init
-COMANDO DE ENTRADA => pin a
-COMANDO DE SAIDA => pout a
-FIM DO PROGRAMA => pinguim
