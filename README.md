@@ -454,10 +454,10 @@
 
 # Requisitos:
 
-    Certifique-se de ter o Python 3.6 ou superior e a biblioteca Ply instalados em seu sistema. 
-    Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'codigos_fonte' 
-    (que contém os arquivos: 'in_out.txt', 'condition.txt', 'repetition.txt' e 'all.txt') devem 
-    estar presentes no mesmo diretório.
+        Certifique-se de ter o Python 3.6 ou superior e a biblioteca Ply instalados em seu sistema. 
+        Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'codigos_fonte' 
+        (que contém os arquivos: 'in_out.txt', 'condition.txt', 'repetition.txt' e 'all.txt') devem 
+        estar presentes no mesmo diretório.
 
 ##  Estrutura do Diretório ./CompiladorPinguim (antes de compilar):
 
@@ -501,8 +501,8 @@
             all_translated.py
             all_commands_output.txt
 
-# Código de exemplo:
+# Comentários
 
-    O código de exemplo realiza a tokenização e análise dos arquivos 'in_out.txt', 'condition.txt', 
-    'repetition.txt', e 'all.txt'. Esse processo gera descrições dos comandos presentes nos códigos 
-    e um arquivo equivalente na linguagem Python para cada um dos exemplos.
+        Mesmo não sendo nescessária essa documentação que de certa forma é exagerada, deixei
+        desse jeito para postar no GitHub e aprender a formatar o README.md e com os comandos
+        git, como git push entre outros
