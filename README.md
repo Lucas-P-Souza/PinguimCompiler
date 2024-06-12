@@ -1,4 +1,4 @@
-# Resumo do README (README.txt): 
+# Resumo do README (README.txt) 
     
         Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador de 
         código fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela Professora 
@@ -18,24 +18,24 @@
         É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho foram 
         implementadas, algumas foram modificadas e outras não estão presentes no código.
 
-# Matéria:    
+# Matéria    
     
         ECOM06A – Compiladores 
 
-# Professora:
+# Professora
     
         Dra. Profa. Thatyana de Faria Piola Seraphim
 
 # Grupo:
 
-## Integrante | Matrícula | Email:
+## Integrante | Matrícula | Email
 
-        Lucas de Paula Souza      | 2022013072 | lucassouzavga@gmail.com, 
-        Luiz Fernando Costa Silva | 2022003915 | luiz.fernandocsilva17@gmail.com, 
-        Ryan Alves Mazzeu         | 2022002186 | ryanmazzeu111@gmail.com, 
-        Vinícius Gomes de Araújo  | 2022003334 | d2022003334@unifei.edu.br.
+        Lucas de Paula Souza      | 2022013072 | lucassouzavga@gmail.com 
+        Luiz Fernando Costa Silva | 2022003915 | luiz.fernandocsilva17@gmail.com 
+        Ryan Alves Mazzeu         | 2022002186 | ryanmazzeu111@gmail.com 
+        Vinícius Gomes de Araújo  | 2022003334 | d2022003334@unifei.edu.br
 
-# Descrição do Projeto:
+# Descrição do Projeto
 
         Este projeto consiste em um analisador de código fonte escrito em Python, capaz de tokenizar 
         o código, gerar descrições dos comandos presentes nele com base nalinguagem Pinguim e traduzi-lo 
@@ -43,7 +43,7 @@
         analisador léxico quanto o sintático. Além disso, há uma funcionalidade de tradução dos comandos 
         da linguagem Pinguim para Python, facilitando a execução dos programas escritos em Pinguim.
 
-# Linguagem Pinguim:
+# Linguagem Pinguim
 
         A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
         Compiladores (ECOM06A). Pinguim é uma linguagem C-like, ou seja, é uma linguagem de programação 
@@ -51,41 +51,41 @@
         significa que a Pinguim possui elementos que são facilmente reconhecíveis por programadores 
         familiarizados com C.
 
-##  Semelhanças Pinguim x C:
+##  Semelhanças Pinguim x C
 
-###     Sintaxe: 
+###     Sintaxe 
 
             Utiliza uma sintaxe semelhante, com chaves '{}' para definir blocos de código, em 
             Pinguimtambém pode-se usar 'pegin' e 'pend' para abrir e fechar os blocos de comando 
             respectivamente.
 
-###     Estruturas de controle: 
+###     Estruturas de controle 
 
             Possuem estruturas de controle como 'pif', 'paf' e 'phile' que respectivamente se 
             comportam de maneira semelhante à 'if', 'else' e 'while' de C.
 
-###     Operadores: 
+###     Operadores 
 
             Utilizam operadores aritméticos ('+', '-', '*', '/', '%'), lógicos (['&', 'and'], 
             ['|', 'or'], '!'),e de comparação ('equal', 'dif', '<', '>', '<=', '>=') que 
             funcionam de maneira similar aos do C.
 
-# Descrição do diretório do Código (contém as definições dos arquivos iniciais e dos que serão gerados pelo compilador):
+# Descrição do diretório do Código (contém as definições dos arquivos iniciais e dos que serão gerados pelo compilador)
 
-##  Lexer (lexer.py):
+##  Lexer (lexer.py)
 
         Este arquivo contém a definição do lexer usando a biblioteca Ply. O lexer é 
         responsável por tokenizar o código fonte, ou seja, converter o código em uma 
         sequência de tokens que representam palavras-chave, identificadores, operadores, 
         números, etc.
 
-##  Myparser (myparser.py):
+##  Myparser (myparser.py)
 
         Neste arquivo está contida a definição do parser utilizando a biblioteca Ply. 
         O parser analisa a estrutura do código fonte tokenizado e gera descrições dos
         comandos presentes no código.
 
-##  Translator (translator.py):
+##  Translator (translator.py)
 
         Dentro deste arquivo reside a função responsável por traduzir as descrições dos 
         comandos geradas pelo parser para código Python. A função translate_to_python 
@@ -99,14 +99,14 @@
         de entrada. Além disso, ele imprime as descrições dos comandos resultantes no 
         terminal e também as escreve em arquivos de saída (.txt).
     
-##  Parsetab (parsetab.py):
+##  Parsetab (parsetab.py)
 
         Este é um arquivo gerado automaticamente pela biblioteca Ply. Ele contém a tabela 
         de análise sintática (parsing table) utilizada pelo Ply para processar a gramática 
         definida no myparser.py. Essencial para o funcionamento do parser, este arquivo não 
         deve ser editado.
 
-## Parser (parser.out): 
+## Parser (parser.out) 
 
         Este arquivo contém a saída gerada pelo processo de tradução do código fonte. Após o 
         código fonte ter sido tokenizado e analisado sintaticamente, as descrições dos comandos 
@@ -117,7 +117,7 @@
         O conteúdo deste arquivo representa a versão Python dos comandos presentes no código 
         fonte original, prontos para serem executados ou manipulados conforme necessário.
 
-##  Pycache (./__pycache__): 
+##  Pycache (./__pycache__) 
 
         Este diretório gerado automaticamente pelo Python. Contém arquivos de cache (bytecode compilado)
         que aceleram a execução dos programas. O Python compila os scripts em bytecode (.pyc files)
@@ -128,7 +128,7 @@
             - parsetab.cpython-312.pyc: Bytecode compilado para parsetab.py.
             - translator.cpython-312.pyc: Bytecode compilado para translator.py.
 
-##  Códigos Fonte (./condigos_fonte):
+##  Códigos Fonte (./condigos_fonte)
 
         Diretório que contém os exemplos de códigos fonte a serem analisados, bem como os 
         arquivos de saída resultantes da análise sintática e da tradução para python. Cada 
@@ -149,9 +149,9 @@
             - all_commands_output.txt
             
 
-# Arquivos de Entrada (./codigos_fonte/ -> in_out.txt, condition.txt, repetition.txt, all.txt):
+# Arquivos de Entrada (./codigos_fonte/ -> in_out.txt, condition.txt, repetition.txt, all.txt)
 
-##  in_out.txt:
+##  in_out.txt
 
         init
             pin a
@@ -160,7 +160,7 @@
 
         Contém um exemplo de código que realiza operações de leitura e impressão de valores.
 
-##  condition.txt: 
+##  condition.txt 
 
         init
             pin a
@@ -175,7 +175,7 @@
 
         Contém um exemplo de código que demonstra uma estrutura condicional.
 
-##  repetition.txt: 
+##  repetition.txt 
 
         init
             a = 5
@@ -189,7 +189,7 @@
 
         Contém um exemplo de código que utiliza um loop para imprimir valores.
 
-##  all.txt:
+##  all.txt
 
         init
             a = 4
@@ -208,7 +208,7 @@
 
         Contém um exemplo de código que combina estruturas condicionais e de repetição.
 
-# Arquivos de Saída (./codigos_fonte/ -> _commands_output.txt e _translated.py):
+# Arquivos de Saída (./codigos_fonte/ -> _commands_output.txt e _translated.py)
 
         Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
         DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados e as TRADUÇÕES desses 
@@ -218,7 +218,7 @@
         são gerados automaticamente durante o processo de análise sintática e são salvos no mesmo 
         diretório do projeto (codigos_fonte).
 
-##  in_out_commands_output.txt:
+##  in_out_commands_output.txt
 
         INICIO DO PROGRAMA => init
         COMANDO DE ENTRADA => pin a
@@ -228,7 +228,7 @@
         Correspondente ao arquivo de entrada 'in_out.txt'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que realiza operações de leitura e impressão de valores.
             
-##  condition_commands_output.txt:
+##  condition_commands_output.txt
 
         INICIO DO PROGRAMA => init
         COMANDO DE ENTRADA => pin a
@@ -246,7 +246,7 @@
         Correspondente ao arquivo de entrada 'condition.txt'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que demonstra uma estrutura condicional.
         
-##      repetition_commands_output.txt:
+##      repetition_commands_output.txt
 
         INICIO DO PROGRAMA => init
         ATRIBUICAO => a = 5
@@ -262,7 +262,7 @@
         Correspondente ao arquivo de entrada 'repetition.txt'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que utiliza um loop para imprimir valores.
 
-##  all_commands_output.txt:
+##  all_commands_output.txt
 
         INICIO DO PROGRAMA => init
         ATRIBUICAO => a = 4
@@ -286,7 +286,7 @@
         no exemplo citado, que combina operações de leitura e impressão de valores, estruturas 
         condicionais e de repetição.
 
-##  in_out_translated.py:
+##  in_out_translated.py
 
         a = input()
         print(a)
@@ -294,7 +294,7 @@
         Correspondente ao arquivo de entrada 'in_out.txt'. Contém a TRADUÇÃO do código que realiza 
         operações de leitura e impressão de valores.
             
-##  condition_translated.py:
+##  condition_translated.py
 
         a = input()
         b = 5
@@ -306,7 +306,7 @@
         Correspondente ao arquivo de entrada 'condition.txt'. Contém a TRADUÇÃO do código que demonstra 
         uma estrutura condicional.
         
-##  repetition_translated.py:
+##  repetition_translated.py
 
         a = 5
         i = 0
@@ -318,7 +318,7 @@
         Correspondente ao arquivo de entrada 'repetition.txt'. Contém a TRADUÇÃO do código que utiliza 
         um loop para imprimir valores.
 
-##  all_translated.py:
+##  all_translated.py
 
         a = 4
         b = 5
@@ -335,158 +335,158 @@
         
         
 
-# Compilação e Execução (explicação mais detalhada do fluxo do código):
+# Compilação e Execução (explicação mais detalhada do fluxo do código)
 
-##  Tokenização:
+##  Tokenização
 
-###     Lexer:
+###     Lexer
 
             A tokenização é realizada pelo módulo lexer, que utiliza a biblioteca ply.lex para
             dividir o código fonte da linguagem Pinguim em tokens. Tokens são as menores unidades
             significativas do código, como palavras-chave, operadores, identificadores e literais.
 
-###     Definição de Tokens:
+###     Definição de Tokens
 
             Uma lista de tokens é definida, incluindo identificadores (ID), números (NUMBER, REAL), 
             strings (STRING), operadores (PLUS, MINUS, etc.), e palavras-chave reservadas (INIT, 
             PINGUIM, PIN, POUT, etc.).
         
-###     Expressões Regulares:
+###     Expressões Regulares
 
             Cada token é associado a uma expressão regular que descreve seu formato. Por exemplo, 
             t_PLUS = r'\+' define que o token PLUS corresponde ao caractere +.
         
-###     Funções de Tokens:
+###     Funções de Tokens
 
             Funções específicas são usadas para tokens com regras mais complexas, como t_ID, t_REAL, 
             t_NUMBER, e t_STRING. Essas funções também podem realizar ações adicionais, como conversão 
             de tipos.
         
-###     Ignorar Espaços e Novas Linhas:
+###     Ignorar Espaços e Novas Linhas
 
             O lexer ignora espaços e tabulações (t_ignore = ' \t') e trata novas linhas para manter o 
             rastreamento do número de linhas (t_newline).
        
-###     Tratamento de Erros:
+###     Tratamento de Erros
 
             Funções para tratamento de erros, como t_error, que lidam com caracteres ilegais no 
             código fonte.
         
-###     Função tokenize_file():
+###     Função tokenize_file()
 
             Esta função lê um arquivo de entrada, aplica o lexer para gerar tokens, e imprime os
             tokens no terminal.
 
-##  Parsing:
+##  Parsing
 
-###     Parser:
+###     Parser
 
             O parsing é realizado pelo módulo myparser, que utiliza a biblioteca ply.yacc para analisar
             a estrutura gramatical do código fonte Pinguim e gerar uma representação interna (árvore de 
             análise sintática).
 
-###     Definição da Gramática:
+###     Definição da Gramática
 
             A gramática da linguagem Pinguim é definida usando regras p_*, que especificam como os 
             tokens devem ser combinados para formar estruturas sintáticas válidas. Por exemplo, 
             p_program, p_commands, p_command, p_assignment, etc.
         
-###     Função p_program:
+###     Função p_program
 
             Define a estrutura básica de um programa Pinguim, que começa com INIT e termina com PINGUIM. 
             Comandos entre essas palavras-chave são processados pela regra commands.
         
-###     Regras de Comandos:
+###     Regras de Comandos
 
             Cada tipo de comando (atribuição, condicional, loop, entrada, saída, bloco) tem sua própria
             regra de análise. Por exemplo, p_assignment lida com atribuições, p_conditional lida com
             comandos condicionais PIF, e assim por diante.
         
-###     Função de Erro:
+###     Função de Erro
 
             A função p_error trata erros de sintaxe, fornecendo feedback sobre tokens inesperados ou
             problemas no código.
         
-###     Função parse_file():
+###     Função parse_file()
 
             Esta função realiza o parsing de um arquivo de entrada, armazenando descrições de comandos 
             em uma lista command_descriptions. Essas descrições são então escritas em um arquivo de 
             saída e traduzidas para Python.
 
-# Tradução para Python:
+# Tradução para Python
 
-##  Módulo de Tradução:
+##  Módulo de Tradução
 
             O módulo translator é responsável por converter as descrições de comandos da linguagem 
             Pinguim em código Python.
 
-###     Função translate_to_python:
+###     Função translate_to_python
 
             Percorre a lista command_descriptions, traduzindo cada comando para sua equivalência em 
             Python. Utiliza indentação para representar a estrutura aninhada de blocos de código 
             (condicionais, loops, etc.).Adiciona palavras-chave e sintaxe Python (if, while, print, 
             etc.) conforme necessário.
         
-###     Tratamento de Comandos:
+###     Tratamento de Comandos
 
             Comandos de entrada (PIN) são traduzidos para input().
             Comandos de saída (POUT) são traduzidos para print().
             Comandos de atribuição, expressões, e blocos de código são manipulados para remover 
             informações desnecessárias e formatar corretamente em Python.
         
-###     Criação de Arquivo Python:
+###     Criação de Arquivo Python
 
             A tradução é salva em um novo arquivo .py, que pode ser executado como um script Python.
 
-# Instalações:
+# Instalações
 
-## Instalação do [Python](https://www.python.org/downloads/):
+## Instalação do [Python](https://www.python.org/downloads/)
 
         Baixe e instale o Python a partir do site oficial. Certifique-se de adicionar o Python ao 
         PATH durante a instalação.
 
-## Instalação da Biblioteca Ply:
+## Instalação da Biblioteca Ply
 
         Para instalar a biblioteca Ply, você pode usar o pip, que é o gerenciador de pacotes 
         do Python. Execute o seguinte comando no terminal:
 
             pip install ply
 
-# Requisitos:
+# Requisitos
 
         Certifique-se de ter o Python 3.6 ou superior e a biblioteca Ply instalados em seu sistema. 
         Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'codigos_fonte' 
         (que contém os arquivos: 'in_out.txt', 'condition.txt', 'repetition.txt' e 'all.txt') devem 
         estar presentes no mesmo diretório.
 
-##  Estrutura do Diretório ./CompiladorPinguim (antes de compilar):
+##  Estrutura do Diretório ./CompiladorPinguim (antes de compilar)
 
         lexer.py
         myparser.py
         translator.py
         main.py
 
-        ./codigos_fontes: 
+        ./codigos_fontes 
 
             in_out.txt 
             condition.txt 
             repetition.txt
             all.txt
 
-##  Estrutura do Diretório ./CompiladorPinguim (depois de compilar):
+##  Estrutura do Diretório ./CompiladorPinguim (depois de compilar)
 
         lexer.py
         myparser.py
         translator.py
         main.py
-        ./__pycache__:
+        ./__pycache__
 
             lexer.cpython-312.pyc
             myparser.cpython-312.pyc
             parsetab.cpython-312.pyc
             translator.cpython-312.pyc
 
-        ./codigos_fontes: 
+        ./codigos_fontes 
 
             in_out.txt 
             in_out_translated.py
@@ -501,8 +501,12 @@
             all_translated.py
             all_commands_output.txt
 
-# Comentários
+# Comentários finais
 
         Mesmo não sendo nescessária essa documentação que de certa forma é exagerada, deixei
-        desse jeito para postar no GitHub e aprender a formatar o README.md e com os comandos
-        git, como git push entre outros
+        desse jeito para postar no GitHub e treinar a formatar o README.md e os comandos git,
+        como git push entre outros.
+
+        Como o trabalho está sendo postado no GitHub, nos reservamos o direito de não nos 
+        responsabilizarmos por cópias descaradas ou discretras do projeto, uma vez que, não temos 
+        controle sobre o acesso dos outros grupos ao VSCode dos intregrantes que postarem.
