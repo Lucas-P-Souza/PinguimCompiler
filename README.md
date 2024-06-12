@@ -341,15 +341,15 @@
 
 ###     Lexer:
 
-            A tokenização é realizada pelo módulo lexer, que utiliza a biblioteca ply.lex para dividir 
-            o código fonte da linguagem Pinguim em tokens. Tokens são as menores unidades significativas 
-            do código, como palavras-chave, operadores, identificadores e literais.
+            A tokenização é realizada pelo módulo lexer, que utiliza a biblioteca ply.lex para
+            dividir o código fonte da linguagem Pinguim em tokens. Tokens são as menores unidades
+            significativas do código, como palavras-chave, operadores, identificadores e literais.
 
 ###     Definição de Tokens:
 
             Uma lista de tokens é definida, incluindo identificadores (ID), números (NUMBER, REAL), 
-            strings (STRING), operadores (PLUS, MINUS, etc.), e palavras-chave reservadas (INIT, PINGUIM, 
-            PIN, POUT, etc.).
+            strings (STRING), operadores (PLUS, MINUS, etc.), e palavras-chave reservadas (INIT, 
+            PINGUIM, PIN, POUT, etc.).
         
 ###     Expressões Regulares:
 
