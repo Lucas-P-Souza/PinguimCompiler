@@ -175,4 +175,5 @@ def parse_file(filename):
 
     #traduzir as descrições dos comandos para Python
     print("\nSaída do arquivo", filename, " traduzido para Python:")
+    #ultiliza a função importada do arquivo translator.py
     tr.translate_to_python(command_descriptions, filename)
