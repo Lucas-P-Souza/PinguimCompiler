@@ -1,9 +1,9 @@
 # Resumo do README (README.txt) 
     
-        Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador de 
-        código fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela Professora 
-        Thatyana de Faria Piola Seraphim. O projeto foi elaborado pelo grupo composto por Lucas de Paula 
-        Souza, Luiz Fernando Costa Silva, Ryan Alves Mazzeu e Vinícius Gomes de Araújo.
+        Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador 
+        de código fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela 
+        Professora Thatyana de Faria Piola Seraphim. O projeto foi elaborado pelo grupo composto por 
+        Lucas de Paula Souza, Luiz Fernando Costa Silva, Ryan Alves Mazzeu e Vinícius Gomes de Araújo.
     
         O objetivo principal deste projeto é implementar um analisador léxico e sintático além de um 
         "tradutor"para a linguagem de programação Pinguim, criada pelo grupo. A linguagem Pinguim, 
@@ -15,8 +15,8 @@
         a linguagem Pinguim, a estrutura dos arquivos de código, o processo de compilação e execução, 
         além de fornecer exemplosde código e seus respectivos resultados de análise.
     
-        É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho foram 
-        implementadas, algumas foram modificadas e outras não estão presentes no código.
+        É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho 
+        foram implementadas, algumas foram modificadas e outras não estão presentes no código.
 
 # Matéria    
     
