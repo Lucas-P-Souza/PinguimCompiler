@@ -74,10 +74,10 @@
 
 ##  Lexer (lexer.py):
 
-        Este arquivo contém a definição do lexer usando a biblioteca Ply. O lexer é 
-        responsável por tokenizar o código fonte, ou seja, converter o código em uma 
-        sequência de tokens que representam palavras-chave, identificadores, operadores, 
-        números, etc.
+    Este arquivo contém a definição do lexer usando a biblioteca Ply. O lexer é 
+    responsável por tokenizar o código fonte, ou seja, converter o código em uma 
+    sequência de tokens que representam palavras-chave, identificadores, operadores, 
+    números, etc.
 
 ##  Myparser (myparser.py):
 
