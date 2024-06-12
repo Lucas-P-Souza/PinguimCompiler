@@ -93,7 +93,10 @@ def translate_to_python(command_descriptions, filename):
             if "EXPRESSAO" in assignment:
                 #remove o "lixo" da string
                 assignment = assignment.replace("EXPRESSAO =>", "").strip()
-                
+            
+            #caso a atribuição seja feita com ":" ao invés de "=" deve-se trocar
+            if ":":    
+                assignment = assignment.replace(":", "=").strip()
             #adiciona a string no lista traduzida, já sem o "lixo", ficando somente: 
             # variável = alguma coisa
             translated_code += "    " * indent_level + f"{assignment}\n"

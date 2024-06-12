@@ -37,8 +37,10 @@ def p_command(p):
 
 def p_assignment(p):
     '''assignment : ID ASSIGN expression
-                  | ID ASSIGN STRING'''
-    p[0] = ["ATRIBUICAO => " + p[1] + " = " + str(p[3])]
+                  | ID ASSIGN STRING
+                  | ID COLON STRING
+                  | ID COLON expression'''
+    p[0] = ["ATRIBUICAO => " + p[1] + " " + p[2] + " " + str(p[3])]
 
 def p_expression(p):
     '''expression : term

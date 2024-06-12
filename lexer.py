@@ -2,6 +2,15 @@
 #import da biblioteca ply para tokenização
 import ply.lex as lex
 
+'''
+Observações:
+
+    Tanto os tokens quanto as expressões passaram por alterações, a fim de facilitar a implementação
+    do código. Dessa forma, as expressõs regulares para os tokens simples se assemelham bastante com
+    as expreções da linguagem python.
+    
+'''
+
 #lista de tokens
 tokens = [
     'ID', 'NUMBER', 'REAL', 'STRING',
@@ -10,7 +19,6 @@ tokens = [
     'AND', 'OR', 'NOT',
     'EQUAL', 'GE', 'LE', 'GT', 'LT', 'NE',
     'LPAREN', 'RPAREN', 'LBRACE', 'RBRACE',
-    'DOT', 'COMMA', 'SEMICOLON',
     'INIT', 'END', 'PIN', 'POUT', 'PIF', 'PAF', 'PHILE', 'POR', 'PEGIN', 'PEND'
 ]
 
@@ -24,22 +32,24 @@ t_MINUSMINUS = r'--'
 t_TIMES = r'\*'
 t_DIVIDE = r'/'
 t_MODULO = r'%'
-t_AND = r'and|&'
-t_OR = r'or|\|'
-t_NOT = r'not|~'
+t_AND = r'and'
+t_OR = r'or'
+t_NOT = r'not'
 t_EQUAL = r'=='
+#"Greater than or Equal to" - Verifica se um valor é maior ou igual a outro.
 t_GE = r'>='
+#"Less than or Equal to" - Verifica se um valor é menor ou igual a outro.
 t_LE = r'<='
+#Greater Than - Verifica se um valor é maior que outro.
 t_GT = r'>'
+#Less Than - Verifica se um valor é menor que outro.
 t_LT = r'<'
+#Not Equal - Verifica se um valor é diferente de outro.
 t_NE = r'!='
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LBRACE = r'\{'
 t_RBRACE = r'\}'
-t_DOT = r'\.'
-t_COMMA = r','
-t_SEMICOLON = r';'
 
 #palavras reservadas
 reserved = {

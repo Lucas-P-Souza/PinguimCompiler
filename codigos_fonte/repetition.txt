@@ -1,9 +1,9 @@
 init
     a = 5
-    i = 0
+    i : 0
     phile(i<a) { 
         pin b
         pout b
-        i = i + 1
+        i : i + 1
     pend
 pinguim  
