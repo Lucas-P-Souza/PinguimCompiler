@@ -39,7 +39,7 @@ def translate_to_python(command_descriptions, filename):
             condition = command.split("=>")[1].strip()
             #Caso haja uma "CONDICAO" deve-se remover string "CONDICAO"
             if "CONDICAO" in condition:
-                condition = condition.replace("CONDICAO", "").strip()
+                condition = condition.replace("CONDICAO ", "").strip()
             #adiciona na string da tradução o comando de while, junto com a sua condição
             #o próprio tradutor coloca while pois é a unica estrutura ded repetição que estamos trabalhando
             translated_code += "    " * indent_level + f"while {condition}:\n"
@@ -47,13 +47,13 @@ def translate_to_python(command_descriptions, filename):
             #adiciona o else quando reconhcer o desvio condicional
             #não trabalhamos com elif, então já colocamo o else no hardcode
             translated_code += "    " * indent_level + "else:\n"
-        elif "CONDICIONAL" in command:
+        elif "CONDICIONAL " in command:
             #trata os casos de PIF
             #pega a string pra frente da =>
             condition = command.split("=>")[1].strip()
             #quando encontrar uma condição dentro do pif, deve remover o "CONDICAO"
             if "CONDICAO" in condition:
-                condition = condition.replace("CONDICAO", "").strip()
+                condition = condition.replace("CONDICAO ", "").strip()
             #quando encontrar um  pif na string tb deve ser removido
             if "pif" in condition:
                 condition = condition.replace("pif", "").strip()
