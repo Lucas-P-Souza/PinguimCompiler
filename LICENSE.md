@@ -1,4 +1,4 @@
-MIT License
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 Copyright (c) [2024] [PinguimCompiler]
 
