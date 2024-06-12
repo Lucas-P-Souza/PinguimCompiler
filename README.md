@@ -451,9 +451,7 @@
         Para instalar a biblioteca Ply, você pode usar o pip, que é o gerenciador de pacotes 
         do Python. Execute o seguinte comando no terminal:
 
-    ```bash
             pip install ply
-    ```
 
 # Requisitos
 
