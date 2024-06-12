@@ -1,0 +1,18 @@
+#ignorar tudo
+*
+
+#não ignorar os seguintes arquivos
+!/.gitignore
+!main.py
+!lexer.py
+!mypaser.py
+!translater.py
+!README.md
+!LICENSE.md
+
+#não ignorar os seguintes arquivos dentro do diretório 'codigos_fonte'
+!codigos_fonte/
+!codigos_fonte/in_out.txt
+!codigos_fonte/condition.txt
+!codigos_fonte/repetition.txt
+!codigos_fonte/all.txt
