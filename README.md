@@ -37,11 +37,12 @@
 
 # Descrição do Projeto
 
-        Este projeto consiste em um analisador de código fonte escrito em Python, capaz de tokenizar 
-        o código, gerar descrições dos comandos presentes nele com base nalinguagem Pinguim e traduzi-lo 
-        para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para implementar tanto o 
-        analisador léxico quanto o sintático. Além disso, há uma funcionalidade de tradução dos comandos 
-        da linguagem Pinguim para Python, facilitando a execução dos programas escritos em Pinguim.
+        Este projeto consiste em um analisador de código fonte escrito em Python, capaz de 
+        tokenizar o código, gerar descrições dos comandos presentes nele com base nalinguagem 
+        Pinguim e traduzi-lo para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) 
+        para implementar tanto o analisador léxico quanto o sintático. Além disso, há uma 
+        funcionalidade de tradução dos comandos da linguagem Pinguim para Python, facilitando 
+        a execução dos programas escritos em Pinguim.
 
 # Linguagem Pinguim
 
