@@ -37,19 +37,19 @@
 
 # Descrição do Projeto:
 
-    Este projeto consiste em um analisador de código fonte escrito em Python, capaz de tokenizar 
-    o código, gerar descrições dos comandos presentes nele com base nalinguagem Pinguim e traduzi-lo 
-    para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para implementar tanto o 
-    analisador léxico quanto o sintático. Além disso, há uma funcionalidade de tradução dos comandos 
-    da linguagem Pinguim para Python, facilitando a execução dos programas escritos em Pinguim.
+        Este projeto consiste em um analisador de código fonte escrito em Python, capaz de tokenizar 
+        o código, gerar descrições dos comandos presentes nele com base nalinguagem Pinguim e traduzi-lo 
+        para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para implementar tanto o 
+        analisador léxico quanto o sintático. Além disso, há uma funcionalidade de tradução dos comandos 
+        da linguagem Pinguim para Python, facilitando a execução dos programas escritos em Pinguim.
 
 # Linguagem Pinguim:
 
-    A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
-    Compiladores (ECOM06A). Pinguim é uma linguagem C-like, ou seja, é uma linguagem de programação 
-    cuja sintaxe, estrutura e paradigmas de certa forme se assemelham aos da linguagem C. Isso 
-    significa que a Pinguim possui elementos que são facilmente reconhecíveis por programadores 
-    familiarizados com C.
+        A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
+        Compiladores (ECOM06A). Pinguim é uma linguagem C-like, ou seja, é uma linguagem de programação 
+        cuja sintaxe, estrutura e paradigmas de certa forme se assemelham aos da linguagem C. Isso 
+        significa que a Pinguim possui elementos que são facilmente reconhecíveis por programadores 
+        familiarizados com C.
 
 ##  Semelhanças Pinguim x C:
 
@@ -75,9 +75,9 @@
 ##  Lexer (lexer.py):
 
         Este arquivo contém a definição do lexer usando a biblioteca Ply. O lexer é 
-    responsável por tokenizar o código fonte, ou seja, converter o código em uma 
-    sequência de tokens que representam palavras-chave, identificadores, operadores, 
-    números, etc.
+        responsável por tokenizar o código fonte, ou seja, converter o código em uma 
+        sequência de tokens que representam palavras-chave, identificadores, operadores, 
+        números, etc.
 
 ##  Myparser (myparser.py):
 
@@ -210,13 +210,13 @@
 
 # Arquivos de Saída (./codigos_fonte/ -> _commands_output.txt e _translated.py):
 
-    Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
-    DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados e as TRADUÇÕES desses 
-    códigos para a linguagem de programação Python. Cada arquivo de entrada terá um arquivo de 
-    saída '.txt' e outro '.py' correspondentes, nomeados com o sufixo '_commands_output.txt' 
-    para as descrições e '_translated.py' para a tradução do código. Esses arquivos de saída 
-    são gerados automaticamente durante o processo de análise sintática e são salvos no mesmo 
-    diretório do projeto (codigos_fonte).
+        Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
+        DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados e as TRADUÇÕES desses 
+        códigos para a linguagem de programação Python. Cada arquivo de entrada terá um arquivo de 
+        saída '.txt' e outro '.py' correspondentes, nomeados com o sufixo '_commands_output.txt' 
+        para as descrições e '_translated.py' para a tradução do código. Esses arquivos de saída 
+        são gerados automaticamente durante o processo de análise sintática e são salvos no mesmo 
+        diretório do projeto (codigos_fonte).
 
 ##  in_out_commands_output.txt:
 
