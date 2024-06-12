@@ -10,10 +10,10 @@
         inspirada na linguagem C,possui sintaxe e estruturas de controle semelhantes, o que facilita 
         o entendimento dos comandos para programadores familiarizados com C.
     
-        O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para realizar a tokenização do código fonte 
-        e a análise sintática, gerando descrições dos comandos presentes no código. Este README detalha 
-        a linguagem Pinguim, a estrutura dos arquivos de código, o processo de compilação e execução, 
-        além de fornecer exemplosde código e seus respectivos resultados de análise.
+        O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para realizar a tokenização do código 
+        fonte e a análise sintática, gerando descrições dos comandos presentes no código. Este README 
+        detalha a linguagem Pinguim, a estrutura dos arquivos de código, o processo de compilação e 
+        execução, além de fornecer exemplosde código e seus respectivos resultados de análise.
     
         É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho 
         foram implementadas, algumas foram modificadas e outras não estão presentes no código.
