@@ -156,14 +156,18 @@ def parse_file(filename):
     
     #escrever as descrições dos comandos no arquivo de saída ('w' -> modo de escrita (write))
     with open(output_filename, 'w') as out_file:
+        
         #para cada descrição de comando, escrever no arquivo de saída
         for description in command_descriptions:
+            
             #verificar se é uma lista de comandos
             if isinstance(description, list):  
+                
                 #para cada comando na lista, escrever no arquivo de saída
                 for cmd in description:
                     out_file.write(cmd + "\n")
                     print(cmd)
+                    
             #caso contrário, escrever a descrição no arquivo de saída
             else:
                 out_file.write(description + "\n")

@@ -6,6 +6,4 @@ init
         pout b
         i = i + 1
     pend
-pinguim
-
-    
+pinguim  
