@@ -1,19 +1,19 @@
 # Resumo do README (README.txt): 
     
-    Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador de código 
-    fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela Professora Thatyana de Faria 
-    Piola Seraphim. O projeto foi elaborado pelo grupo composto por Lucas de Paula Souza, Luiz Fernando Costa 
-    Silva, Ryan Alves Mazzeu e Vinícius Gomes de Araújo.
+    Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador de 
+    código fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela Professora 
+    Thatyana de Faria Piola Seraphim. O projeto foi elaborado pelo grupo composto por Lucas de Paula 
+    Souza, Luiz Fernando Costa Silva, Ryan Alves Mazzeu e Vinícius Gomes de Araújo.
 
-    O objetivo principal deste projeto é implementar um analisador léxico e sintático além de um "tradutor"
-    para a linguagem de programação Pinguim, criada pelo grupo. A linguagem Pinguim, inspirada na linguagem C,
-    possui sintaxe e estruturas de controle semelhantes, o que facilita o entendimento dos comandos para 
-    programadores familiarizados com C.
+    O objetivo principal deste projeto é implementar um analisador léxico e sintático além de um 
+    "tradutor"para a linguagem de programação Pinguim, criada pelo grupo. A linguagem Pinguim, 
+    inspirada na linguagem C,possui sintaxe e estruturas de controle semelhantes, o que facilita 
+    o entendimento dos comandos para programadores familiarizados com C.
 
-    O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para realizar a tokenização do código fonte e a 
-    análise sintática, gerando descrições dos comandos presentes no código. Este README detalha a linguagem 
-    Pinguim, a estrutura dos arquivos de código, o processo de compilação e execução, além de fornecer exemplos
-    de código e seus respectivos resultados de análise.
+    O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para realizar a tokenização do código fonte 
+    e a análise sintática, gerando descrições dos comandos presentes no código. Este README detalha 
+    a linguagem Pinguim, a estrutura dos arquivos de código, o processo de compilação e execução, 
+    além de fornecer exemplosde código e seus respectivos resultados de análise.
 
     É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho foram 
     implementadas, algumas foram modificadas e outras não estão presentes no código.
@@ -37,26 +37,27 @@
 
 # Descrição do Projeto:
 
-    Este projeto consiste em um analisador de código fonte escrito em Python, capaz 
-    de tokenizar o código, gerar descrições dos comandos presentes nele com base na
-    linguagem Pinguim e traduzi-lo para python. O projeto utiliza a biblioteca Ply 
-    (Python Lex-Yacc) para implementar tanto o analisador léxico quanto o sintático. 
-    Além disso, há uma funcionalidade de tradução dos comandos da linguagem Pinguim 
-    para Python, facilitando a execução dos programas escritos em Pinguim.
+    Este projeto consiste em um analisador de código fonte escrito em Python, capaz de tokenizar 
+    o código, gerar descrições dos comandos presentes nele com base nalinguagem Pinguim e traduzi-lo 
+    para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) para implementar tanto o 
+    analisador léxico quanto o sintático. Além disso, há uma funcionalidade de tradução dos comandos 
+    da linguagem Pinguim para Python, facilitando a execução dos programas escritos em Pinguim.
 
 # Linguagem Pinguim:
 
     A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
     Compiladores (ECOM06A). Pinguim é uma linguagem C-like, ou seja, é uma linguagem de programação 
-    cuja sintaxe, estrutura e paradigmas de certa forme se assemelham aos da linguagem C. Isso significa 
-    que a Pinguim possui elementos que são facilmente reconhecíveis por programadores familiarizados com C.
+    cuja sintaxe, estrutura e paradigmas de certa forme se assemelham aos da linguagem C. Isso 
+    significa que a Pinguim possui elementos que são facilmente reconhecíveis por programadores 
+    familiarizados com C.
 
 ##  Semelhanças Pinguim x C:
 
 ###     Sintaxe: 
 
-            Utiliza uma sintaxe semelhante, com chaves '{}' para definir blocos de código, em Pinguim
-            também pode-se usar 'pegin' e 'pend' para abrir e fechar os blocos de comando respectivamente.
+            Utiliza uma sintaxe semelhante, com chaves '{}' para definir blocos de código, em 
+            Pinguimtambém pode-se usar 'pegin' e 'pend' para abrir e fechar os blocos de comando 
+            respectivamente.
 
 ###     Estruturas de controle: 
 
@@ -65,8 +66,9 @@
 
 ###     Operadores: 
 
-            Utilizam operadores aritméticos ('+', '-', '*', '/', '%'), lógicos (['&', 'and'], ['|', 'or'], '!'),
-            e de comparação ('equal', 'dif', '<', '>', '<=', '>=') que funcionam de maneira similar aos do C.
+            Utilizam operadores aritméticos ('+', '-', '*', '/', '%'), lógicos (['&', 'and'], 
+            ['|', 'or'], '!'),e de comparação ('equal', 'dif', '<', '>', '<=', '>=') que 
+            funcionam de maneira similar aos do C.
 
 # Descrição do diretório do Código (contém as definições dos arquivos iniciais e dos que serão gerados pelo compilador):
 
@@ -328,8 +330,8 @@
                 print(i)
                 i =  i + 1
 
-        Correspondente ao arquivo de entrada 'all.txt'. Contém a TRADUÇÃO do código que combina operações 
-        de leitura e impressão de valores, estruturas condicionais e de repetição.
+        Correspondente ao arquivo de entrada 'all.txt'. Contém a TRADUÇÃO do código que combina 
+        operações de leitura e impressão de valores, estruturas condicionais e de repetição.
         
         
 
@@ -339,15 +341,15 @@
 
 ###     Lexer:
 
-            A tokenização é realizada pelo módulo lexer, que utiliza a biblioteca ply.lex para dividir o 
-            código fonte da linguagem Pinguim em tokens. Tokens são as menores unidades significativas do 
-            código, como palavras-chave, operadores, identificadores e literais.
+            A tokenização é realizada pelo módulo lexer, que utiliza a biblioteca ply.lex para dividir 
+            o código fonte da linguagem Pinguim em tokens. Tokens são as menores unidades significativas 
+            do código, como palavras-chave, operadores, identificadores e literais.
 
 ###     Definição de Tokens:
 
             Uma lista de tokens é definida, incluindo identificadores (ID), números (NUMBER, REAL), 
-            strings (STRING), operadores (PLUS, MINUS, etc.), e palavras-chave reservadas (INIT, PINGUIM, PIN, 
-            POUT, etc.).
+            strings (STRING), operadores (PLUS, MINUS, etc.), e palavras-chave reservadas (INIT, PINGUIM, 
+            PIN, POUT, etc.).
         
 ###     Expressões Regulares:
 
@@ -357,7 +359,8 @@
 ###     Funções de Tokens:
 
             Funções específicas são usadas para tokens com regras mais complexas, como t_ID, t_REAL, 
-            t_NUMBER, e t_STRING. Essas funções também podem realizar ações adicionais, como conversão de tipos.
+            t_NUMBER, e t_STRING. Essas funções também podem realizar ações adicionais, como conversão 
+            de tipos.
         
 ###     Ignorar Espaços e Novas Linhas:
 
@@ -366,68 +369,70 @@
        
 ###     Tratamento de Erros:
 
-            Funções para tratamento de erros, como t_error, que lidam com caracteres ilegais no código fonte.
+            Funções para tratamento de erros, como t_error, que lidam com caracteres ilegais no 
+            código fonte.
         
 ###     Função tokenize_file():
 
-            Esta função lê um arquivo de entrada, aplica o lexer para gerar tokens, e imprime os tokens no 
-            terminal.
+            Esta função lê um arquivo de entrada, aplica o lexer para gerar tokens, e imprime os
+            tokens no terminal.
 
 ##  Parsing:
 
 ###     Parser:
 
-            O parsing é realizado pelo módulo myparser, que utiliza a biblioteca ply.yacc para analisar a 
-            estrutura gramatical do código fonte Pinguim e gerar uma representação interna (árvore de análise 
-            sintática).
+            O parsing é realizado pelo módulo myparser, que utiliza a biblioteca ply.yacc para analisar
+            a estrutura gramatical do código fonte Pinguim e gerar uma representação interna (árvore de 
+            análise sintática).
 
 ###     Definição da Gramática:
 
-            A gramática da linguagem Pinguim é definida usando regras p_*, que especificam como os tokens 
-            devem ser combinados para formar estruturas sintáticas válidas. Por exemplo, p_program, 
-            p_commands, p_command, p_assignment, etc.
+            A gramática da linguagem Pinguim é definida usando regras p_*, que especificam como os 
+            tokens devem ser combinados para formar estruturas sintáticas válidas. Por exemplo, 
+            p_program, p_commands, p_command, p_assignment, etc.
         
 ###     Função p_program:
 
-            Define a estrutura básica de um programa Pinguim, que começa com INIT e termina com END. Comandos 
-            entre essas palavras-chave são processados pela regra commands.
+            Define a estrutura básica de um programa Pinguim, que começa com INIT e termina com PINGUIM. 
+            Comandos entre essas palavras-chave são processados pela regra commands.
         
 ###     Regras de Comandos:
 
-            Cada tipo de comando (atribuição, condicional, loop, entrada, saída, bloco) tem sua própria regra 
-            de análise. Por exemplo, p_assignment lida com atribuições, p_conditional lida com comandos 
-            condicionais PIF, e assim por diante.
+            Cada tipo de comando (atribuição, condicional, loop, entrada, saída, bloco) tem sua própria
+            regra de análise. Por exemplo, p_assignment lida com atribuições, p_conditional lida com
+            comandos condicionais PIF, e assim por diante.
         
 ###     Função de Erro:
 
-            A função p_error trata erros de sintaxe, fornecendo feedback sobre tokens inesperados ou problemas 
-            no código.
+            A função p_error trata erros de sintaxe, fornecendo feedback sobre tokens inesperados ou
+            problemas no código.
         
 ###     Função parse_file():
 
             Esta função realiza o parsing de um arquivo de entrada, armazenando descrições de comandos 
-            em uma lista command_descriptions. Essas descrições são então escritas em um arquivo de saída 
-            e traduzidas para Python.
+            em uma lista command_descriptions. Essas descrições são então escritas em um arquivo de 
+            saída e traduzidas para Python.
 
 # Tradução para Python:
 
 ##  Módulo de Tradução:
 
-            O módulo translator é responsável por converter as descrições de comandos da linguagem Pinguim em 
-            código Python.
+            O módulo translator é responsável por converter as descrições de comandos da linguagem 
+            Pinguim em código Python.
 
 ###     Função translate_to_python:
 
-            Percorre a lista command_descriptions, traduzindo cada comando para sua equivalência em Python. 
-            Utiliza indentação para representar a estrutura aninhada de blocos de código (condicionais, 
-            loops, etc.).Adiciona palavras-chave e sintaxe Python (if, while, print, etc.) conforme necessário.
+            Percorre a lista command_descriptions, traduzindo cada comando para sua equivalência em 
+            Python. Utiliza indentação para representar a estrutura aninhada de blocos de código 
+            (condicionais, loops, etc.).Adiciona palavras-chave e sintaxe Python (if, while, print, 
+            etc.) conforme necessário.
         
 ###     Tratamento de Comandos:
 
             Comandos de entrada (PIN) são traduzidos para input().
             Comandos de saída (POUT) são traduzidos para print().
-            Comandos de atribuição, expressões, e blocos de código são manipulados para remover informações 
-            desnecessárias e formatar corretamente em Python.
+            Comandos de atribuição, expressões, e blocos de código são manipulados para remover 
+            informações desnecessárias e formatar corretamente em Python.
         
 ###     Criação de Arquivo Python:
 
