@@ -31,4 +31,4 @@ O PyInstaller é uma ferramenta útil para empacotar programas Python em execut�
     pip install pyinstaller
     ```
 
-Após seguir esses passos, você terá o Python, a biblioteca Ply e o PyInstaller instalados no seu sistema, prontos para uso em seus projetos.
+Após seguir esses passos, você terá o Python, a biblioteca Ply e o PyInstaller instalados no seu sistema, prontos para usar o compilador.
