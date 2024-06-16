@@ -1,13 +1,15 @@
 init
+    n = 0
     pout "Digite um valor para n: "
     pin n
-    result = 1
+    aux = n
+    resultado = 1
     phile(n > 1) pegin
         resultado = resultado * n
         n = n - 1
     pend
     pout "O fatorial de "
-    pout n
+    pout aux
     pout "é"
     pout resultado
 pinguim
