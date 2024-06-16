@@ -1,5 +1,7 @@
 import os
 import subprocess
+import shutil
+import subprocess
 
 def build_executable(script, spec_path, dist_path):
     '''
@@ -13,12 +15,26 @@ def build_executable(script, spec_path, dist_path):
     #obtém o caminho absoluto para o script e a pasta de distribuição personalizada 'output_exe'
     script_path = os.path.abspath(script)
     output_folder = os.path.join(dist_path, 'output_exe')  # Pasta de distribuição personalizada 'output_exe'
+    spec_file = os.path.join(spec_path, os.path.basename(script).replace('.py', '.spec'))
     command = ['pyinstaller', '--onefile', '--specpath', spec_path, '--distpath', output_folder, script_path]
     
     try:
         #executa o comando para gerar o executável
         subprocess.check_call(command)
         print(f"Executável gerado para {script} com sucesso!")
+
+        #apaga a pasta 'build' após a geração do executável
+        build_folder = os.path.join(os.getcwd(), 'build')
+        if os.path.exists(build_folder):
+            shutil.rmtree(build_folder)
+            print("Pasta 'build' removida com sucesso.")
+        
+        #apaga o arquivo .spec após a geração do executável
+        if os.path.exists(spec_file):
+            os.remove(spec_file)
+            print(f"Arquivo .spec {spec_file} removido com sucesso.")
+            
+        shutil.rmtree('output_spec/')
         
     except subprocess.CalledProcessError as e:
         #exibe uma mensagem de erro se a geração do executável falhar
