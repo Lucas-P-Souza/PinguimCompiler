@@ -576,7 +576,7 @@
 
         Mesmo não sendo nescessária essa documentação que de certa forma é exagerada, deixei
         desse jeito para postar no GitHub e treinar a formatar o README.md e os comandos git,
-        como git push entre outros.
+        como git push, git commit entre outros.
 
         Como o trabalho está sendo postado no GitHub, nos reservamos o direito de não nos 
         responsabilizarmos por cópias descaradas ou discretras do projeto, uma vez que, não temos 
