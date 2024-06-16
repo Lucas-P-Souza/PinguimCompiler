@@ -11,7 +11,7 @@ folder_path = 'src_files/'
 #caminhos das pastas de saída dos arquivos .txt, .py, .spec e dos .exe
 output_folder_txt = 'output_txt/'
 output_folder_py = 'output_py/'
-output_folder_spec = 'output_spec/'
+output_folder_spec = 'output_spec/' #sera removida após a geração dos executáveis
 dist_folder_name = 'output_exe/'
 
 #caso as pastas de saída não existam, elas são criadas
