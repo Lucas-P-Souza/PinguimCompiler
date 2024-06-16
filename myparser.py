@@ -139,43 +139,34 @@ def p_error(p):
 parser = yacc.yacc()
 
 #função para realizar o parsing do arquivo de entrada
-def parse_file(filename):
+def parse_file(filename, output_folder_txt, output_folder_py):
     global command_descriptions
 
-    #extrair o nome do arquivo sem a extensão
-    file_name_without_extension = os.path.splitext(filename)[0]
-    output_filename = file_name_without_extension + '_commands_output.txt'
+    #tira a extensão do arquivo
+    file_name_without_extension = os.path.splitext(os.path.basename(filename))[0]
+    output_filename = os.path.join(output_folder_txt, file_name_without_extension + '_commands_output.txt')
 
-    #ler o conteúdo do arquivo de entrada ('r' -> modo de leitura (read))
+    #lê o conteúdo do arquivo de entrada ('r' -> modo de leitura (read))
     with open(filename, 'r') as file:
         data = file.read()
     
-    #reinicializar command_descriptions (esvaziar a lista de descrições de comandos)
+    #reinicializar command_descriptions para tirar o lixo de execuções anteriores
     command_descriptions = []
     
-    #realizar o parsing do conteúdo do arquivo
+    #realizar o parsing do conteúdo do arquivo de entrada
     parser.parse(data)
     
     #escrever as descrições dos comandos no arquivo de saída ('w' -> modo de escrita (write))
     with open(output_filename, 'w') as out_file:
-        
-        #para cada descrição de comando, escrever no arquivo de saída
         for description in command_descriptions:
-            
-            #verificar se é uma lista de comandos
             if isinstance(description, list):  
-                
-                #para cada comando na lista, escrever no arquivo de saída
                 for cmd in description:
                     out_file.write(cmd + "\n")
                     print(cmd)
-                    
-            #caso contrário, escrever a descrição no arquivo de saída
             else:
                 out_file.write(description + "\n")
                 print(description)
 
-    #traduzir as descrições dos comandos para Python
+    #traduzir as descrições dos comandos para Python e escrever no arquivo de saída
     print("\nSaída do arquivo", filename, " traduzido para Python:")
-    #ultiliza a função importada do arquivo translator.py
-    tr.translate_to_python(command_descriptions, filename)
+    tr.translate_to_python(command_descriptions, filename, output_folder_py)

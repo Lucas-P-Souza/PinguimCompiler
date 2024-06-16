@@ -10,9 +10,9 @@
 !README.md
 !LICENSE.md
 
-#não ignorar os seguintes arquivos dentro do diretório 'codigos_fonte'
-!codigos_fonte/
-!codigos_fonte/in_out.txt
-!codigos_fonte/condition.txt
-!codigos_fonte/repetition.txt
-!codigos_fonte/all.txt
+#não ignorar os seguintes arquivos dentro do diretório 'src_files'
+!src_files/
+!src_files/in_out.pin
+!src_files/condition.pin
+!src_files/repetition.pin
+!src_files/all.pin

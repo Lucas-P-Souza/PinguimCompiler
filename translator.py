@@ -25,7 +25,7 @@ Observação:
 '''
 
 #função responsável pela tradução
-def translate_to_python(command_descriptions, filename):
+def translate_to_python(command_descriptions, filename, output_folder_py):
     
     #define a variável global que receberá o código traduzido e limpa ela logo em seguida para 
     # evitar restos de compilações anteriores
@@ -137,9 +137,8 @@ def translate_to_python(command_descriptions, filename):
     
     #módulo responsável por criar o arquivo .py que podera ser compilado pelo próprio compilador
     #   da linguagem python
-    file_name_without_extension = os.path.splitext(filename)[0]
-    #utiliza o sufixo _translated.py para identificar os arquivos aqui gerados
-    python_output_filename = file_name_without_extension + '_translated.py'
+    file_name_without_extension = os.path.splitext(os.path.basename(filename))[0]
+    python_output_filename = os.path.join(output_folder_py, file_name_without_extension + '_translated.py')
     with open(python_output_filename, 'w') as py_file:
         py_file.write(translated_code)
         print("Código Python traduzido foi salvo em:", python_output_filename)
