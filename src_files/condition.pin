@@ -1,4 +1,5 @@
 init
+    pout "Digite ô valor de a: "
     pin a
     b = 5
     pif (a==b) pegin

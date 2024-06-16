@@ -1,0 +1,16 @@
+init 
+    pout "Digite o valor de n: "
+    n = 0
+    pin n
+    a = 0
+    b = 1
+    temp = a
+    phile(n > 0) pegin
+        pout a
+        temp = a
+        a = b
+        b = temp + b
+        n = n - 1
+    }
+    pout "-"
+pinguim

@@ -31,6 +31,8 @@ def translate_to_python(command_descriptions, filename, output_folder_py):
     # evitar restos de compilações anteriores
     global translated_code
     translated_code = ""  
+    
+    array_of_atribs = []
 
     #nível de indentação inicial, essa variável será incrementada ou decrementada conforme 
     # forem sendo reconhcidas as aberturas ou fechamente dos blocos de comandos
@@ -95,16 +97,24 @@ def translate_to_python(command_descriptions, filename, output_folder_py):
                 assignment = assignment.replace("EXPRESSAO =>", "").strip()
             
             #caso a atribuição seja feita com ":" ao invés de "=" deve-se trocar
-            if ":":    
+            if ":" in assignment:    
                 assignment = assignment.replace(":", "=").strip()
+            
+            #caso a atribuição seja feita com "TERMO" ao invés de um numero na frente do "="
+            if "TERMO" in assignment:
+                assignment = assignment.replace("TERMO ", "").strip()
+                
             #adiciona a string no lista traduzida, já sem o "lixo", ficando somente: 
             # variável = alguma coisa
+            array_of_atribs.append(assignment[0:assignment.find(" =")])
             translated_code += "    " * indent_level + f"{assignment}\n"
         
         elif "EXPRESSAO" in command:
             #trata o caso das expressões
             #remove deixa apenas o que estiver a frente da => e adicona na lista traduzida
             expression = command.split("=>")[1].strip()
+            if "TERMO" in expression:
+                expression = expression.replace("TERMO ", "").strip()
             translated_code += "    " * indent_level + f"{expression}\n"
         
         elif "COMPARACAO" in command:
@@ -115,13 +125,16 @@ def translate_to_python(command_descriptions, filename, output_folder_py):
             #trata o caso do pin
             #basta remover o pin e adicionar "= input()" em frente à varaivel que ficará
             var_name = command.split("pin")[1].strip()
-            translated_code += "    " * indent_level + f"{var_name} = input()\n"
+            if var_name in array_of_atribs:
+                translated_code += "    " * indent_level + f"{var_name} = int(input())\n"
+            else:
+                translated_code += "    " * indent_level + f"{var_name} = input()\n"
         
         elif "COMANDO DE SAIDA" in command:
             #trata o caso do pout
             #para isso deve-se remover o pout e colocar o que estava a sua frente dentro de um print()
             output_value = command.split("pout")[1].strip()
-            print(output_value)
+            #print(output_value)
             translated_code += "    " * indent_level + f"print({output_value})\n"
         
         elif "INICIO DO BLOCO" in command:

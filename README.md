@@ -16,7 +16,8 @@
         execução, além de fornecer exemplosde código e seus respectivos resultados de análise.
     
         É valido lembrar que nem todas as expressões regulares apresentadas na 1ª etapa do trabalho 
-        foram implementadas, algumas foram modificadas e outras não estão presentes no código.
+        foram implementadas, algumas foram modificadas e outras não estão presentes no código. E também
+        estão presentes nesse README somente as explicações dos programas de teste mais básicos.
 
 # Matéria    
     
@@ -524,10 +525,11 @@
 
         ./src_files 
 
-            in_out.txt 
-            condition.txt 
-            repetition.txt
-            all.txt
+            in_out.pin 
+            condition.pin 
+            repetition.pin
+            all.pin
+            fibinacci.pin
 
 ##  Estrutura do Diretório ./CompiladorPinguim (depois de compilar)
 
