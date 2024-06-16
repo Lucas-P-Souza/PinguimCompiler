@@ -88,10 +88,19 @@
 
 ##  Translator (translator.py)
 
-        Dentro deste arquivo reside a função responsável por traduzir as descrições dos 
+        Dentro deste arquivo está a função responsável por traduzir as descrições dos 
         comandos geradas pelo parser para código Python. A função translate_to_python 
         lê as descrições, converte cada comando em uma instrução Python equivalente e 
         salva o resultado em um arquivo .py.
+
+##  Builder (builder.py)
+
+        Dentro deste arquivo, a função principal é gerenciar a criação dos executáveis
+        a partir dos scripts Python traduzidos. Utilizamos o PyInstaller para empacotar
+        os arquivos Python gerados pelo tradutor em executáveis independentes. O processo
+        inclui a verificação e criação automática da pasta output_exe se não existir, 
+        garantindo que os programas em Pinguim sejam facilmente distribuídos e executados 
+        em diferentes ambientes sem a necessidade de instalação prévia do Python.
 
 ##  Main (main.py):
 
@@ -159,6 +168,16 @@
                 - repetition_translated.py
                 - all_translated.py
 
+##  Output .exe (./output_exe)
+
+        Este diretório contém os arquivos executáveis gerados pelo builder a partir dos arquivos .py 
+        resultandes da tradução
+
+                - in_out.exe
+                - condition.exe
+                - repetition.exe
+                - all.exe
+
 
 # Arquivos de Entrada (./src_filles/ -> in_out.pin, condition.pin, repetition.pin, all.pin)
 
@@ -219,15 +238,15 @@
 
         Contém um exemplo de código que combina estruturas condicionais e de repetição.
 
-# Arquivos de Saída (./output_txt/ -> XXXXXX_commands_output.txt e ./output_py -> XXXXX_translated.py)
+# Arquivos de Saída (./output_txt/ -> XXXXXX_commands_output.txt, ./output_py -> XXXXX_translated.py, ./output_exe -> XXXXX.exe)
 
         Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
-        DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados e as TRADUÇÕES desses 
-        códigos para a linguagem de programação Python. Cada arquivo de entrada terá um arquivo de 
-        saída '.txt' e outro '.py' correspondentes, nomeados com o sufixo '_commands_output.txt' 
-        para as descrições e '_translated.py' para a tradução do código. Esses arquivos de saída 
-        são gerados automaticamente durante o processo de análise sintática e são salvos no mesmo 
-        diretório do projeto (codigos_fonte).
+        DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados, as TRADUÇÕES desses 
+        códigos para a linguagem de programação Python e os EXECUTÁVEIS de cada código. Cada arquivo 
+        de entrada terá um arquivo de saída '.txt', um '.py' e outro .exe correspondentes, nomeados
+        com o sufixo '_commands_output.txt' para as descrições e '_translated.py' para a tradução do 
+        código. Esses arquivos de saída são gerados automaticamente durante o processo de compilação 
+        e são salvos em diferentes diretórios (./output_txt, ./output_py, ./output_exe).
 
 ##  in_out_commands_output.txt
 
@@ -424,9 +443,9 @@
             em uma lista command_descriptions. Essas descrições são então escritas em um arquivo de 
             saída e traduzidas para Python.
 
-# Tradução para Python
+## Tradução para Python
 
-##  Módulo de Tradução
+###     Módulo de Tradução
 
             O módulo translator é responsável por converter as descrições de comandos da linguagem 
             Pinguim em código Python.
@@ -449,6 +468,23 @@
 
             A tradução é salva em um novo arquivo .py, que pode ser executado como um script Python.
 
+## Geração de Executáveis
+
+###     Função build_executable:
+
+        Usa PyInstaller para criar um executável único a partir de um script Python.
+
+###     Função generate_executables:
+
+        Itera sobre todos os arquivos .py na pasta especificada, gerando um executável para cada um.
+
+## Integração dos Componentes
+
+        O código final mostra como todos esses componentes (tokenização, parsing, tradução e geração 
+        de executáveis) são integrados para compilar programas escritos na linguagem Pinguim. Ele 
+        assume uma estrutura de pastas específica e utiliza bibliotecas como ply e PyInstaller para 
+        alcançar os objetivos de compilação e execução.
+
 # Instalações
 
 ## Instalação do [Python](https://www.python.org/downloads/)
@@ -463,18 +499,26 @@
 
             pip install ply
 
+## Instalação do PyInstaller
+
+        Para instalar o PyInstaller, você pode usar o pip, que é o gerenciador de pacotes 
+        do Python. Execute o seguinte comando no terminal:
+
+            pip install pyinstaller
+
 # Requisitos
 
-        Certifique-se de ter o Python 3.6 ou superior e a biblioteca Ply instalados em seu sistema. 
-        Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'src_files' 
-        (que contém os arquivos: 'in_out.pin', 'condition.pin', 'repetition.pin' e 'all.pin') devem 
-        estar presentes no mesmo diretório.
+        Certifique-se de ter o Python 3.6 ou superior, a biblioteca Ply e o pyinstaller instalados 
+        em seu sistema. Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', 'builder.py'
+        e a pasta 'src_files' (que contém os arquivos: 'in_out.pin', 'condition.pin', 'repetition.pin'
+        e 'all.pin') devem estar presentes no mesmo diretório.
 
 ##  Estrutura do Diretório ./CompiladorPinguim (antes de compilar)
 
         lexer.py
         myparser.py
         translator.py
+        builder.py
         main.py
 
         ./src_files 
@@ -489,14 +533,8 @@
         lexer.py
         myparser.py
         translator.py
+        builder.py
         main.py
-
-        ./__pycache__
-
-            lexer.cpython-312.pyc
-            myparser.cpython-312.pyc
-            parsetab.cpython-312.pyc
-            translator.cpython-312.pyc
 
         ./src_files 
 
@@ -504,6 +542,13 @@
             condition.pin
             repetition.pin
             all.pin
+
+        ./__pycache__
+
+            lexer.cpython-312.pyc
+            myparser.cpython-312.pyc
+            parsetab.cpython-312.pyc
+            translator.cpython-312.pyc
 
         ./output_txt
 
@@ -519,6 +564,12 @@
             repetition_translated.py
             all_translated.py
        
+       ./output_exe 
+
+            in_out.exe 
+            condition.exe
+            repetition.exe
+            all.exe
 
 # Comentários finais
 
