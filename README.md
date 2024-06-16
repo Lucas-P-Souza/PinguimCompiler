@@ -47,7 +47,7 @@
 # Linguagem Pinguim
 
         A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
-        Compiladores (ECOM06A) e possui a extensão [.pin]. Pinguim é uma linguagem C-like, ou seja, 
+        Compiladores (ECOM06A) e possui a extensão ".pin". Pinguim é uma linguagem C-like, ou seja, 
         é uma linguagem de programação cuja sintaxe, estrutura e paradigmas de certa forme se 
         assemelham aos da linguagem C. Isso significa que a Pinguim possui elementos que são 
         facilmente reconhecíveis por programadores familiarizados com C.
@@ -91,7 +91,7 @@
         Dentro deste arquivo está a função responsável por traduzir as descrições dos 
         comandos geradas pelo parser para código Python. A função translate_to_python 
         lê as descrições, converte cada comando em uma instrução Python equivalente e 
-        salva o resultado em um arquivo [.py].
+        salva o resultado em um arquivo .py.
 
 ##  Builder (builder.py)
 
