@@ -1,4 +1,4 @@
-# Resumo do README (README.txt) 
+# Resumo do README
     
         Este arquivo README tem o intuito de explicar o funcionamento e a estrutura de um analisador 
         de código fonte desenvolvido para a disciplina ECOM06A – Compiladores, ministrada pela 
@@ -42,15 +42,15 @@
         Pinguim e traduzi-lo para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) 
         para implementar tanto o analisador léxico quanto o sintático. Além disso, há uma 
         funcionalidade de tradução dos comandos da linguagem Pinguim para Python, facilitando 
-        a execução dos programas escritos em Pinguim.
+        a execução dos programas escritos em Pinguim ".pin".
 
 # Linguagem Pinguim
 
         A linguagem de programação Pinguim foi criada pelo grupo durante um trabalho da disciplina
-        Compiladores (ECOM06A). Pinguim é uma linguagem C-like, ou seja, é uma linguagem de programação 
-        cuja sintaxe, estrutura e paradigmas de certa forme se assemelham aos da linguagem C. Isso 
-        significa que a Pinguim possui elementos que são facilmente reconhecíveis por programadores 
-        familiarizados com C.
+        Compiladores (ECOM06A) e possui a extensão ".pin". Pinguim é uma linguagem C-like, ou seja, 
+        é uma linguagem de programação cuja sintaxe, estrutura e paradigmas de certa forme se 
+        assemelham aos da linguagem C. Isso significa que a Pinguim possui elementos que são 
+        facilmente reconhecíveis por programadores familiarizados com C.
 
 ##  Semelhanças Pinguim x C
 
@@ -129,30 +129,40 @@
             - parsetab.cpython-312.pyc: Bytecode compilado para parsetab.py.
             - translator.cpython-312.pyc: Bytecode compilado para translator.py.
 
-##  Códigos Fonte (./condigos_fonte)
+##  Source Files (./src_filles)
 
-        Diretório que contém os exemplos de códigos fonte a serem analisados, bem como os 
-        arquivos de saída resultantes da análise sintática e da tradução para python. Cada 
-        código fonte tem um arquivo correspondente que descreve os comandos identificados 
-        no código.
+        Este diretório contém os exemplos de códigos fonte a serem analisados. Para
+        que os arquivos sejam compilados eles devem estar na extenção da linguagem ".pin".
 
-            - in_out.txt 
-            - in_out_translated.py
-            - in_out_commands_output.txt
-            - condition.txt
-            - condition_translated.py
-            - condition_commands_output.txt
-            - repetition.txt
-            - repetition_translated.py
-            - repetition_commands_output.txt
-            - all.txt
-            - all_translated.py
-            - all_commands_output.txt
+                - in_out.pin
+                - condition.pin
+                - repetition.pin
+                - all.pin
             
+##  Output .txt (./output_txt)
 
-# Arquivos de Entrada (./codigos_fonte/ -> in_out.txt, condition.txt, repetition.txt, all.txt)
+        Este diretório contém os arquivos de saída resultantes da análise sintática dos arquivos 
+        de entrada.
 
-##  in_out.txt
+                - in_out_commands_output.txt
+                - condition_commands_output.txt
+                - repetition_commands_output.txt
+                - all_commands_output.txt
+
+##  Output .py (./output_py)
+
+        Este diretório contém os arquivos de saída resultantes da tardução dos arquivos de entrada 
+        para python.
+
+                - in_out_translated.py
+                - condition_translated.py
+                - repetition_translated.py
+                - all_translated.py
+
+
+# Arquivos de Entrada (./src_filles/ -> in_out.pin, condition.pin, repetition.pin, all.pin)
+
+##  in_out.pin
 
         init
             pin a
@@ -161,7 +171,7 @@
 
         Contém um exemplo de código que realiza operações de leitura e impressão de valores.
 
-##  condition.txt 
+##  condition.pin 
 
         init
             pin a
@@ -176,7 +186,7 @@
 
         Contém um exemplo de código que demonstra uma estrutura condicional.
 
-##  repetition.txt 
+##  repetition.pin 
 
         init
             a = 5
@@ -190,7 +200,7 @@
 
         Contém um exemplo de código que utiliza um loop para imprimir valores.
 
-##  all.txt
+##  all.pin
 
         init
             a = 4
@@ -209,7 +219,7 @@
 
         Contém um exemplo de código que combina estruturas condicionais e de repetição.
 
-# Arquivos de Saída (./codigos_fonte/ -> _commands_output.txt e _translated.py)
+# Arquivos de Saída (./output_txt/ -> XXXXXX_commands_output.txt e ./output_py -> XXXXX_translated.py)
 
         Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
         DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados e as TRADUÇÕES desses 
@@ -456,8 +466,8 @@
 # Requisitos
 
         Certifique-se de ter o Python 3.6 ou superior e a biblioteca Ply instalados em seu sistema. 
-        Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'codigos_fonte' 
-        (que contém os arquivos: 'in_out.txt', 'condition.txt', 'repetition.txt' e 'all.txt') devem 
+        Os arquivos 'main.py', 'lexer.py', 'myparser.py', 'translator.py', e a pasta 'src_files' 
+        (que contém os arquivos: 'in_out.pin', 'condition.pin', 'repetition.pin' e 'all.pin') devem 
         estar presentes no mesmo diretório.
 
 ##  Estrutura do Diretório ./CompiladorPinguim (antes de compilar)
@@ -467,7 +477,7 @@
         translator.py
         main.py
 
-        ./codigos_fontes 
+        ./src_files 
 
             in_out.txt 
             condition.txt 
@@ -480,6 +490,7 @@
         myparser.py
         translator.py
         main.py
+        
         ./__pycache__
 
             lexer.cpython-312.pyc
@@ -487,20 +498,27 @@
             parsetab.cpython-312.pyc
             translator.cpython-312.pyc
 
-        ./codigos_fontes 
+        ./src_files 
 
-            in_out.txt 
-            in_out_translated.py
+            in_out.pin 
+            condition.pin
+            repetition.pin
+            all.pin
+
+        ./output_txt
+
             in_out_commands_output.txt
-            condition.txt
-            condition_translated.py
             condition_commands_output.txt
-            repetition.txt
-            repetition_translated.py
             repetition_commands_output.txt
-            all.txt
-            all_translated.py
             all_commands_output.txt
+
+        ./output_py
+
+            in_out_translated.py
+            condition_translated.py
+            repetition_translated.py
+            all_translated.py
+       
 
 # Comentários finais
 
