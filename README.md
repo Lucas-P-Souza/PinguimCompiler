@@ -238,7 +238,7 @@
 
         Contém um exemplo de código que combina estruturas condicionais e de repetição.
 
-# Arquivos de Saída (./output_txt/ -> XXXXXX_commands_output.txt, ./output_py -> XXXXX_translated.py, ./output_exe -> XXXXX.exe)
+# Arquivos de Saída (./output_txt/ -> X_commands_output.txt, ./output_py -> X_translated.py, ./output_exe -> X.exe)
 
         Ao executar o script principal main.py, o analisador gera arquivos de saída que contêm as 
         DESCRIÇÕES DOS COMANDOS presentes nos exemplos de códigos analisados, as TRADUÇÕES desses 
@@ -255,7 +255,7 @@
         COMANDO DE SAIDA => pout a
         FIM DO PROGRAMA => pinguim
 
-        Correspondente ao arquivo de entrada 'in_out.txt'. Contém as DESCRIÇÕES DOS COMANDOS
+        Correspondente ao arquivo de entrada 'in_out.pin'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que realiza operações de leitura e impressão de valores.
             
 ##  condition_commands_output.txt
@@ -273,7 +273,7 @@
         FIM DO BLOCO => }
         FIM DO PROGRAMA => pinguim
 
-        Correspondente ao arquivo de entrada 'condition.txt'. Contém as DESCRIÇÕES DOS COMANDOS
+        Correspondente ao arquivo de entrada 'condition.pin'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que demonstra uma estrutura condicional.
         
 ##      repetition_commands_output.txt
@@ -289,7 +289,7 @@
         FIM DO BLOCO => pend
         FIM DO PROGRAMA => pinguim
 
-        Correspondente ao arquivo de entrada 'repetition.txt'. Contém as DESCRIÇÕES DOS COMANDOS
+        Correspondente ao arquivo de entrada 'repetition.pin'. Contém as DESCRIÇÕES DOS COMANDOS
         presentes no exemplo citado, que utiliza um loop para imprimir valores.
 
 ##  all_commands_output.txt
@@ -312,7 +312,7 @@
         FIM DO BLOCO => }
         FIM DO PROGRAMA => pinguim
 
-        Correspondente ao arquivo de entrada 'all.txt'. Contém as DESCRIÇÕES DOS COMANDOS presentes
+        Correspondente ao arquivo de entrada 'all.pin'. Contém as DESCRIÇÕES DOS COMANDOS presentes
         no exemplo citado, que combina operações de leitura e impressão de valores, estruturas 
         condicionais e de repetição.
 
@@ -321,7 +321,7 @@
         a = input()
         print(a)
 
-        Correspondente ao arquivo de entrada 'in_out.txt'. Contém a TRADUÇÃO do código que realiza 
+        Correspondente ao arquivo de entrada 'in_out.pin'. Contém a TRADUÇÃO do código que realiza 
         operações de leitura e impressão de valores.
             
 ##  condition_translated.py
@@ -333,7 +333,7 @@
         else:
             print("diferente")
 
-        Correspondente ao arquivo de entrada 'condition.txt'. Contém a TRADUÇÃO do código que demonstra 
+        Correspondente ao arquivo de entrada 'condition.pin'. Contém a TRADUÇÃO do código que demonstra 
         uma estrutura condicional.
         
 ##  repetition_translated.py
@@ -345,7 +345,7 @@
             print(b)
             i =  i + 1
 
-        Correspondente ao arquivo de entrada 'repetition.txt'. Contém a TRADUÇÃO do código que utiliza 
+        Correspondente ao arquivo de entrada 'repetition.pin'. Contém a TRADUÇÃO do código que utiliza 
         um loop para imprimir valores.
 
 ##  all_translated.py
@@ -360,7 +360,7 @@
                 print(i)
                 i =  i + 1
 
-        Correspondente ao arquivo de entrada 'all.txt'. Contém a TRADUÇÃO do código que combina 
+        Correspondente ao arquivo de entrada 'all.pin'. Contém a TRADUÇÃO do código que combina 
         operações de leitura e impressão de valores, estruturas condicionais e de repetição.
         
         
