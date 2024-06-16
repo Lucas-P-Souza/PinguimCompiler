@@ -10,6 +10,7 @@
 !builder.py
 !README.md
 !LICENSE.md
+!REQUISITOS.md
 
 #não ignorar os seguintes arquivos dentro do diretório 'src_files'
 !src_files/
