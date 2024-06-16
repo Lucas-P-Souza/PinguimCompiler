@@ -580,4 +580,4 @@
 
         Como o trabalho está sendo postado no GitHub, nos reservamos o direito de não nos 
         responsabilizarmos por cópias descaradas ou discretras do projeto, uma vez que, não temos 
-        controle sobre o acesso dos outros grupos ao VSCode dos intregrantes que postarem.
+        controle sobre o acesso dos outros grupos ao GitHub dos intregrantes que postarem.
