@@ -450,7 +450,7 @@
             O módulo translator é responsável por converter as descrições de comandos da linguagem 
             Pinguim em código Python.
 
-###     Função translate_to_python
+###     Função translate_to_python()
 
             Percorre a lista command_descriptions, traduzindo cada comando para sua equivalência em 
             Python. Utiliza indentação para representar a estrutura aninhada de blocos de código 
