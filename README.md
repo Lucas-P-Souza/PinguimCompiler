@@ -42,7 +42,7 @@
         Pinguim e traduzi-lo para python. O projeto utiliza a biblioteca Ply (Python Lex-Yacc) 
         para implementar tanto o analisador léxico quanto o sintático. Além disso, há uma 
         funcionalidade de tradução dos comandos da linguagem Pinguim para Python, facilitando 
-        a execução dos programas escritos em Pinguim [.pin].
+        a execução dos programas escritos em Pinguim ".pin".
 
 # Linguagem Pinguim
 
