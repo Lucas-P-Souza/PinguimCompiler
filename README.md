@@ -95,12 +95,12 @@
 
 ##  Builder (builder.py)
 
-        Dentro deste arquivo, a função principal é gerenciar a criação dos executáveis
-        a partir dos scripts Python traduzidos. Utilizamos o PyInstaller para empacotar
-        os arquivos Python gerados pelo tradutor em executáveis independentes. O processo
-        inclui a verificação e criação automática da pasta output_exe se não existir, 
-        garantindo que os programas em Pinguim sejam facilmente distribuídos e executados 
-        em diferentes ambientes sem a necessidade de instalação prévia do Python.
+        Neste arquivo, a função principal é gerenciar a criação dos executáveis a partir 
+        dos scripts Python traduzidos. Utilizamos o PyInstaller para empacotaros arquivos 
+        Python gerados pelo tradutor em executáveis independentes. O processoinclui a 
+        verificação e criação automática da pasta output_exe se não existir, garantindo 
+        que os programas em Pinguim sejam facilmente distribuídos e executados em diferentes 
+        ambientes sem a necessidade de instalação prévia do Python.
 
 ##  Main (main.py):
 
@@ -470,13 +470,14 @@
 
 ## Geração de Executáveis
 
-###     Função build_executable:
+###     Função build_executable()
 
-        Usa PyInstaller para criar um executável único a partir de um script Python.
+            Essa função usa o PyInstaller para criar um executável único a partir de um script Python.
 
-###     Função generate_executables:
+###     Função generate_executables()
 
-        Itera sobre todos os arquivos .py na pasta especificada, gerando um executável para cada um.
+            Essa função itera sobre todos os arquivos .py na pasta especificada, gerando um executável
+            para cada um.
 
 ## Integração dos Componentes
 
