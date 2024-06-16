@@ -404,8 +404,8 @@
         
 ###     Função p_program
 
-            Define a estrutura básica de um programa Pinguim, que começa com INIT e termina com PINGUIM. 
-            Comandos entre essas palavras-chave são processados pela regra commands.
+            Define a estrutura básica de um programa Pinguim, que começa com INIT e termina com 
+            PINGUIM. Comandos entre essas palavras-chave são processados pela regra commands.
         
 ###     Regras de Comandos
 
@@ -490,7 +490,7 @@
         myparser.py
         translator.py
         main.py
-        
+
         ./__pycache__
 
             lexer.cpython-312.pyc
