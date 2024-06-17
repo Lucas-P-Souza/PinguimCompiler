@@ -14,9 +14,8 @@ def build_executable(script, spec_path, dist_path):
     '''
     #obtém o caminho absoluto para o script e a pasta de distribuição personalizada 'output_exe'
     script_path = os.path.abspath(script)
-    output_folder = os.path.join(dist_path, 'output_exe')  # Pasta de distribuição personalizada 'output_exe'
     spec_file = os.path.join(spec_path, os.path.basename(script).replace('.py', '.spec'))
-    command = ['pyinstaller', '--onefile', '--specpath', spec_path, '--distpath', output_folder, script_path]
+    command = ['pyinstaller', '--onefile', '--specpath', spec_path, '--distpath', dist_path, script_path]
     
     try:
         #executa o comando para gerar o executável
@@ -54,8 +53,7 @@ def generate_executables(scripts_folder, spec_folder, dist_folder_name):
     dist_path = os.path.join(os.getcwd(), dist_folder_name)
     
     #cria a pasta de distribuição se não existir ainda
-    output_exe_path = os.path.join(dist_path, 'output_exe')
-    os.makedirs(output_exe_path, exist_ok=True)
+    os.makedirs(dist_path, exist_ok=True)
 
     #itera sobre os arquivos .py na pasta de scripts e gera executáveis para cada um
     for file_name in os.listdir(scripts_folder):
