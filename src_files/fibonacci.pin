@@ -5,6 +5,7 @@ init
     a = 0
     b = 1
     temp = a
+    pout "-"
     phile(n > 0) pegin
         pout a
         temp = a
@@ -12,5 +13,4 @@ init
         b = temp + b
         n = n - 1
     }
-    pout "-"
 pinguim
