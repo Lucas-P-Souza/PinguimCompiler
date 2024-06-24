@@ -494,14 +494,14 @@
         Baixe e instale o Python a partir do site oficial. Certifique-se de adicionar o Python ao 
         PATH durante a instalação.
 
-## Instalação da Biblioteca Ply
+## Instalação da Biblioteca [Python Lex-Yacc](https://www.dabeaz.com/ply/ply.html)
 
         Para instalar a biblioteca Ply, você pode usar o pip, que é o gerenciador de pacotes 
         do Python. Execute o seguinte comando no terminal:
 
             pip install ply
 
-## Instalação do PyInstaller
+## Instalação do [PyInstaller](https://pyinstaller.org/en/stable/index.html)
 
         Para instalar o PyInstaller, você pode usar o pip, que é o gerenciador de pacotes 
         do Python. Execute o seguinte comando no terminal:
