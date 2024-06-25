@@ -9,7 +9,7 @@ Este guia fornece instruções detalhadas para a instalação do Python, da bibl
 1. Baixe a versão mais recente do Python no [site oficial](https://www.python.org/).
 2. Durante a instalação, marque a opção para adicionar o Python ao PATH. Isto é crucial para que o Python e suas ferramentas sejam reconhecidos no terminal.
 
-### Instalação da Biblioteca Ply
+### Instalação da Biblioteca [Python Lex-Yacc](https://www.dabeaz.com/ply/ply.html)
 
 A biblioteca Ply é necessária para análise léxica e sintática em Python. Para instalá-la, siga os passos abaixo:
 
@@ -20,7 +20,7 @@ A biblioteca Ply é necessária para análise léxica e sintática em Python. Pa
     pip install ply
     ```
 
-### Instalação do PyInstaller
+### Instalação do [PyInstaller](https://pyinstaller.org/en/stable/index.html)
 
 O PyInstaller é uma ferramenta útil para empacotar programas Python em executáveis independentes. Para instalá-lo, siga os passos abaixo:
 
