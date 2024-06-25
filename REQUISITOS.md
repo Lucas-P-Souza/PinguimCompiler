@@ -4,7 +4,7 @@
 
 Este guia fornece instruções detalhadas para a instalação do Python, da biblioteca Ply e do PyInstaller.
 
-### Instalação do [Python Lex-Yacc](https://www.dabeaz.com/ply/ply.html)
+### Instalação do [Python](https://www.python.org/downloads/)
 
 1. Baixe a versão mais recente do Python no [site oficial](https://www.python.org/).
 2. Durante a instalação, marque a opção para adicionar o Python ao PATH. Isto é crucial para que o Python e suas ferramentas sejam reconhecidos no terminal.
