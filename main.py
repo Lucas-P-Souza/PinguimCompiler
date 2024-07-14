@@ -5,20 +5,22 @@ from myparser import parse_file
 from builder import generate_executables
 import os
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 #caminho da pasta onde estão os arquivos .pin
-folder_path = 'src_files/'
+folder_path = os.path.join(script_dir, 'src_files')
 
 #caminhos das pastas de saída dos arquivos .txt, .py, .spec e dos .exe
-output_folder_txt = 'output_txt/'
-output_folder_py = 'output_py/'
-output_folder_spec = 'output_spec/' #sera removida após a geração dos executáveis
-dist_folder_name = 'output_exe/'
+output_folder_txt = os.path.join(script_dir, 'output_txt')
+output_folder_py = os.path.join(script_dir, 'output_py')
+output_folder_spec = os.path.join(script_dir, 'output_spec') #será removida futuramente
+dist_folder_name = os.path.join(script_dir, 'output_exe')
 
 #caso as pastas de saída não existam, elas são criadas
 os.makedirs(output_folder_txt, exist_ok=True)
 os.makedirs(output_folder_py, exist_ok=True)
 os.makedirs(output_folder_spec, exist_ok=True)
-os.makedirs(dist_folder_name, exist_ok=True)  
+os.makedirs(dist_folder_name, exist_ok=True)
 
 #verifica se o arquivo é um arquivo .pin
 def is_pin_file(filename):

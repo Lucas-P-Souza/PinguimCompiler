@@ -2,6 +2,7 @@ import os
 import subprocess
 import shutil
 import subprocess
+import argparse
 
 def build_executable(script, spec_path, dist_path):
     '''
@@ -33,7 +34,9 @@ def build_executable(script, spec_path, dist_path):
             os.remove(spec_file)
             print(f"Arquivo .spec {spec_file} removido com sucesso.")
             
-        shutil.rmtree('output_spec/')
+        if os.path.exists(spec_path):
+            shutil.rmtree(spec_path)
+            print("Pasta 'output_spec/' removida com sucesso.")
         
     except subprocess.CalledProcessError as e:
         #exibe uma mensagem de erro se a geração do executável falhar
@@ -50,7 +53,9 @@ def generate_executables(scripts_folder, spec_folder, dist_folder_name):
     '''
     
     #obtém o caminho completo para a pasta de scripts e a pasta de distribuição
-    dist_path = os.path.join(os.getcwd(), dist_folder_name)
+    scripts_path = os.path.abspath(scripts_folder)
+    spec_path = os.path.abspath(spec_folder)
+    dist_path = os.path.abspath(dist_folder_name)
     
     #cria a pasta de distribuição se não existir ainda
     os.makedirs(dist_path, exist_ok=True)
@@ -60,3 +65,12 @@ def generate_executables(scripts_folder, spec_folder, dist_folder_name):
         if file_name.endswith('.py'):
             script_path = os.path.join(scripts_folder, file_name)
             build_executable(script_path, spec_folder, dist_path)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Gera executáveis para scripts Python usando PyInstaller.')
+    parser.add_argument('scripts_folder', type=str, help='Caminho para a pasta onde os scripts Python estão localizados.')
+    parser.add_argument('spec_folder', type=str, help='Caminho para o diretório onde os arquivos .spec serão colocados.')
+    parser.add_argument('dist_folder_name', type=str, help='Nome da pasta onde a pasta de distribuição será criada.')
+
+    args = parser.parse_args()
+    generate_executables(args.scripts_folder, args.spec_folder, args.dist_folder_name)
