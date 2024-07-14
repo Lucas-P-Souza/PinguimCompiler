@@ -18,7 +18,7 @@ dist_folder_name = 'output_exe/'
 os.makedirs(output_folder_txt, exist_ok=True)
 os.makedirs(output_folder_py, exist_ok=True)
 os.makedirs(output_folder_spec, exist_ok=True)
-os.makedirs(dist_folder_name, exist_ok=True)
+os.makedirs(dist_folder_name, exist_ok=True)  
 
 #verifica se o arquivo é um arquivo .pin
 def is_pin_file(filename):
